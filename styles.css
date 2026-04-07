@@ -13,6 +13,87 @@ header {
     padding: 20px;
     background-color: #4CAF50;
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.icono-carrito {
+    font-size: 28px;
+    cursor: pointer;
+    position: relative;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.carrito-contenedor {
+    display: none; 
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    z-index: 999;
+}
+
+.carrito-contenedor.activo {
+    display: block;
+}
+
+.item-carrito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    gap: 10px;
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-control {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 2px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-control:hover {
+    background-color: #ddd;
+}
+
+.btn-comprar-final {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-comprar-final:hover {
+    background-color: #45a049;
 }
 
 header .logo {
@@ -98,6 +179,48 @@ header nav ul li a {
 
 .tiendas ul {
     list-style: none;
+}
+
+.contenedor-botones-externos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-externo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    width: 180px; 
+    height: 60px;
+    text-decoration: none;
+}
+
+.btn-externo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.btn-externo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-color: #4CAF50;
+}
+
+.btn-externo.m-libre:hover {
+    border-color: #fff159; 
+}
+
+.btn-externo.ebay:hover {
+    border-color: #0064d2; 
 }
 
 
